@@ -1,0 +1,125 @@
+
+<html>
+<script src="sudoku.js"> </script>
+<style>
+
+body{
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+
+.btn1 {
+	color: black;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+.form-control{
+	-webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+#center{
+	overflow: auto;
+	height: 480px;
+	border-radius: 30px;
+	background-color: rgba(0,0,0,0.5);
+	margin-top: 50px;
+}
+
+#board{
+	overflow: auto;
+}
+
+#left{
+	padding-left: 100px;
+	padding-top: 50px;
+}
+#right{
+	padding-left: 100px;
+	padding-top: 50px;
+}
+#right-well{
+	border: 1px solid rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.7);
+	box-shadow: 0pt 1px 1px rgba(0, 0, 0, 0.05) inset;
+	width: 300px;
+}
+#left-well{
+	border: 1px solid rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.7);
+	box-shadow: 0pt 1px 1px rgba(0, 0, 0, 0.05) inset;
+	width: 300px;
+}
+
+#message{
+	width: 300px;
+}
+
+.footer{
+	text-align: right;
+	padding-right: 10px;
+}
+
+</style>
+<head>
+	<link rel="stylesheet" href="bootstrap\css\bootstrap.css">
+</head>
+<body onload="main()" background = "images\Background.png">
+<div class="header">
+	<center><h1 style="color:white">Sudoku solver</h1></center>
+</div>
+<div class="bs-docs-grid">
+<div class="row show-grid">
+	<div id="left" class="col-md-4">
+	<div id="levelmessage"></div>
+	<div id="left-well" class="span2 well">
+		<h3 style="color:white">Settings</h3>
+		<hr>
+		<div id="go"><button id="btn2" class="btn btn-primary btn-default" onclick = "callchangediff()">Change the difficulty level</button></div>
+		<div id="levelsetter" class="input-group">
+			<br>
+		</div>
+		<button id="btn2" class="btn btn-primary btn-default" onclick = "reset()">Reset board</button>
+		<br><br>
+		<button id="btn2" class="btn btn-primary btn-default" onclick = "emptyboard()">Give your own sudoku</button>
+	</div>
+	</div>
+	<div id="center" class="col-md-4">
+		<div id="board"></div>
+	</div>
+	<div id="right" class="col-md-4">
+	<div id="right-well" class="span2 well">
+		<h3 style="color:white">Options</h3>
+		<hr>
+		<button id="btn2" class="btn btn-success btn-default" onclick = "solveit()">Solve</button>
+		<br><br>
+		<button id="btn2" class="btn btn-danger btn-default" onclick = "checkit()">Check it</button>
+		<br>
+	</div>
+	<div id="message"></div>
+	</div>
+</div>
+</div>
+<div class="footer">
+	<br><p style="color:white">By <strong>Prateek Chandan</strong></p>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
